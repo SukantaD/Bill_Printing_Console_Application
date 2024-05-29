@@ -9,7 +9,7 @@ public class PrintBill extends NonVegPizza {
         System.out.println("\n-------------------- Welcome to Pizzamania --------------------");
         System.out.println("Menu :-");
         System.out.println("--------------");
-        System.out.println("1. Veg Pizza - 300 \n2. Non-Veg Pizza - 400 \n3. Veg Delight Pizza - 550 \n4. Non-Veg Delight Pizza - 650 \nExtra Cheese - 100, Extra Toppings - 150 ");
+        System.out.println("1. Veg Pizza - 300 \n2. Non-Veg Pizza - 400 \n3. Delux Veg Pizza - 550 \n4. Delux Non-Veg Pizza - 650 \nExtra Cheese - 100, Extra Toppings - 150 ");
         System.out.println("------------------------------------------");
         System.out.println("Type your choice :- ");
         int pizzachoice = input.nextInt();
@@ -21,20 +21,21 @@ public class PrintBill extends NonVegPizza {
                 break;
 
             case 2:
-                String type = "nonveg"; // intializing String variable to handle method overriding
+                String type = "nonveg";         // intializing String variable to handle method overriding
                 Order.pizzaOrder(Order, "nonveg");
                 System.out.println("Total Bill:- " + Order.price + "\n");
                 break;
 
             case 3:
-                int delight = 1;
-                Order.pizzaOrder(Order, delight); // more argument for method overloading in VegPizza class
+                int delux = 1;
+                Order.pizzaOrder(Order, delux);     // more argument for method overloading in VegPizza class
                 System.out.println("Total Bill:- " + Order.price + "\n");
                 break;
 
             case 4:
-                delight = 1;
-                Order.pizzaOrder(Order, "nonveg", delight); // more argument for method overloading in NonVegPizza class
+                delux = 1;
+                Order.pizzaOrder(Order, "nonveg", delux);   /* more argument for method overloading 
+                                                                    in NonVegPizza class */
                 System.out.println("Total Bill:- " + Order.price + "\n");
                 break;
 
